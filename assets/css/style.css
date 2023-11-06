@@ -1,0 +1,426 @@
+.dashboard {
+  display: grid;
+  max-width: 100%;
+  grid-column: auto;
+  grid-template-areas: "header" "aside" "main" "main" "footer";
+  grid-template-rows: 130px 130px 1fr 1fr 130px;
+  text-align: center;
+}
+.dashboard header {
+  grid-area: header;
+  width: 100%;
+  background-image: url(../img/fondo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  gap: 30px;
+}
+.dashboard header nav .brand figure {
+  width: 60px;
+}
+.dashboard header nav .brand figure img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+.dashboard header nav .p {
+  padding-left: 20px;
+  margin-left: 20px;
+}
+.dashboard header nav button {
+  width: 100px;
+  height: 30px;
+  position: relative;
+  border: none;
+  outline: none;
+  background: #350642;
+  color: #dcc2e4;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+.dashboard header nav button:hover {
+  color: #fff;
+}
+.dashboard header nav button span {
+  position: absolute;
+  background: #fff;
+  transition: 0.5s;
+}
+.dashboard header nav button span:nth-child(1) {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: -100%;
+}
+.dashboard header nav button span:nth-child(2) {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  right: -100%;
+}
+.dashboard header nav button span:nth-child(3) {
+  width: 1px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+}
+.dashboard header nav button span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  top: -100%;
+  right: 0;
+}
+.dashboard header nav button:hover span:nth-child(1) {
+  left: 0;
+}
+.dashboard header nav button:hover span:nth-child(2) {
+  right: 0;
+}
+.dashboard header nav button:hover span:nth-child(3) {
+  bottom: 0;
+}
+.dashboard header nav button:hover span:nth-child(4) {
+  top: 0;
+}
+.dashboard header nav .icon {
+  display: none;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  height: 1fr;
+  padding: 20px;
+  background-color: blueviolet;
+  color: white;
+}
+aside .contenedor-contacto {
+  display: none;
+}
+aside button {
+  width: 100px;
+  height: 25px;
+  position: relative;
+  border: none;
+  outline: none;
+  background: #350642;
+  color: #dcc2e4;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+aside button:hover {
+  color: #fff;
+}
+aside button span {
+  position: absolute;
+  background: #ffffff;
+  transition: 0.5s;
+}
+aside button span:nth-child(1) {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: -100%;
+}
+aside button span:nth-child(2) {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  right: -100%;
+}
+aside button span:nth-child(3) {
+  width: 1px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+}
+aside button span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  top: -100%;
+  right: 0;
+}
+aside button:hover span:nth-child(1) {
+  left: 0;
+}
+aside button:hover span:nth-child(2) {
+  right: 0;
+}
+aside button:hover span:nth-child(3) {
+  bottom: 0;
+}
+aside button:hover span:nth-child(4) {
+  top: 0;
+}
+
+main {
+  height: 100%;
+  grid-area: main;
+  background-color: #350642;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main .card {
+  background-color: mediumorchid;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 40px;
+  border: 1px solid #350642;
+  grid-area: "card";
+  width: 100%;
+}
+main .card h5 {
+  padding: 15px;
+  background-color: mediumorchid;
+}
+main .card img {
+  max-width: 30%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: footer;
+  background-color: indigo;
+  padding-top: 50px;
+  color: white;
+}
+footer .contactos {
+  font-size: 25px;
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    grid-template-areas: "header header header header header" "aside  main   main   main   main" "footer footer footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 280px;
+  }
+  .dashboard header {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../img/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    height: 100%;
+    justify-content: space-between;
+    margin: 1px;
+  }
+  .dashboard header nav {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .dashboard header nav .brand figure {
+    width: 50px;
+  }
+  .dashboard header nav .brand .p {
+    padding-top: 20px;
+  }
+  .dashboard header nav .icon {
+    margin-left: 30px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 20px;
+  }
+  .dashboard header nav button {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    border: none;
+    outline: none;
+    background: #350642;
+    color: #dcc2e4;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .dashboard header nav button:hover {
+    color: #fff;
+  }
+  .dashboard header nav button span {
+    position: absolute;
+    background: #fff;
+    transition: 0.5s;
+  }
+  .dashboard header nav button span:nth-child(1) {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+  }
+  .dashboard header nav button span:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+  }
+  .dashboard header nav button span:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+  }
+  .dashboard header nav button span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+  }
+  .dashboard header nav button:hover span:nth-child(1) {
+    left: 0;
+  }
+  .dashboard header nav button:hover span:nth-child(2) {
+    right: 0;
+  }
+  .dashboard header nav button:hover span:nth-child(3) {
+    bottom: 0;
+  }
+  .dashboard header nav button:hover span:nth-child(4) {
+    top: 0;
+  }
+  .dashboard aside {
+    display: flex;
+    flex-direction: column;
+    height: 1fr;
+    padding: 20px;
+    background-color: blueviolet;
+    color: white;
+  }
+  .dashboard aside .contenedor-contacto {
+    display: none;
+  }
+  .dashboard aside .container-buscar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .dashboard aside button {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    border: none;
+    outline: none;
+    background: #350642;
+    color: #dcc2e4;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .dashboard aside button:hover {
+    color: #fff;
+  }
+  .dashboard aside button span {
+    position: absolute;
+    background: #ffffff;
+    transition: 0.5s;
+  }
+  .dashboard aside button span:nth-child(1) {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+  }
+  .dashboard aside button span:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+  }
+  .dashboard aside button span:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+  }
+  .dashboard aside button span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+  }
+  .dashboard aside button:hover span:nth-child(1) {
+    left: 0;
+  }
+  .dashboard aside button:hover span:nth-child(2) {
+    right: 0;
+  }
+  .dashboard aside button:hover span:nth-child(3) {
+    bottom: 0;
+  }
+  .dashboard aside button:hover span:nth-child(4) {
+    top: 0;
+  }
+  .dashboard main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    gap: 20px;
+    grid-template-areas: "card card" "card card";
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
+  .dashboard main .card {
+    background-color: mediumorchid;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    border: 1px solid #350642;
+    grid-area: "card";
+    height: 300px;
+    width: auto;
+  }
+  .dashboard main .card h5 {
+    padding: 15px;
+  }
+  .dashboard main .card img {
+    max-width: 30%;
+  }
+  .dashboard footer {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: footer;
+    background-color: indigo;
+    padding-top: 50px;
+    color: white;
+  }
+  .dashboard footer .contactos {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=style.css.map */
